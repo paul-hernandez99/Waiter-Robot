@@ -17,19 +17,23 @@
 
   (:action pick-up
     :parameters (?r - robot ?p - plate ?loc - location)
-    :precondition (and (at ?r ?loc) (buffet ?loc) (at ?p ?loc) (not (hasPlate ?r)))
+    :precondition (and (at ?r ?loc) (buffet ?loc)
+                  (at ?p ?loc) (not (hasPlate ?r)))
     :effect (and (holding ?r ?p) (hasPlate ?r) (not (at ?p ?loc)))
   )
 
   (:action present
     :parameters (?r - robot ?p - plate ?loc - location ?c - customer)
-    :precondition (and (at ?c ?loc) (at ?r ?loc) (holding ?r ?p) (hasFood ?p) (not (served ?c)))
-    :effect (and (served ?c) (not (holding ?r ?p)) (not (hasPlate ?r)) (at ?p ?loc))
+    :precondition (and (at ?c ?loc) (at ?r ?loc) (holding ?r ?p)
+                  (hasFood ?p) (not (served ?c)))
+    :effect (and (served ?c) (not (holding ?r ?p))
+            (not (hasPlate ?r)) (at ?p ?loc))
   )
 
   (:action fill
     :parameters (?r - robot ?p - plate ?loc - location)
-    :precondition (and (at ?r ?loc) (buffet ?loc) (holding ?r ?p) (not (hasFood ?p)))
+    :precondition (and (at ?r ?loc) (buffet ?loc)
+                  (holding ?r ?p) (not (hasFood ?p)))
     :effect (and (hasFood ?p))
   )
 
