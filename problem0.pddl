@@ -1,4 +1,4 @@
-(define (problem problem1)
+(define (problem problem0)
   (:domain restaurant2)
   
   ;; Define objects
@@ -42,6 +42,7 @@
 
   (:goal
     (and 
+      (at robot BTA)
       (served customer1) (at robot BTA) (at plate1 PMA)
     )
   )

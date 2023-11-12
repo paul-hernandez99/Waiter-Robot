@@ -1,4 +1,4 @@
-(define (problem problem1)
+(define (problem problem3)
   (:domain restaurant2)
   
   ;; Define objects
@@ -52,7 +52,6 @@
     (and 
         (at robot PUA)
         (served customer1) (served customer2) (served customer3)
-        (at plate1 PMA)    (at plate2 ALA)    (at plate3 PLA)
     )
   )
 )

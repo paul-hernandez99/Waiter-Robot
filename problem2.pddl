@@ -1,4 +1,4 @@
-(define (problem problem1)
+(define (problem problem2)
   (:domain restaurant)
   
   ;; Define objects
@@ -18,7 +18,7 @@
 
     ;; Robot initialization
 
-    (at robot ALA)
+    (at robot BTA)
 
     ;; Plate initialization
 
@@ -50,6 +50,7 @@
 
   (:goal
     (and 
+      (at robot BTA)
       (served customer1) (served customer2) (served customer3)
     )
   )

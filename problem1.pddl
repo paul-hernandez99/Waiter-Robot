@@ -44,7 +44,6 @@
     (and 
         (at robot PUA)
         (served customer1)
-        (at plate1 PLA)
     )
   )
 )
