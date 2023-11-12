@@ -1,105 +1,96 @@
 Planning service: https://solver.planning.domains/solve
 Domain: restaurantC, Problem: problem3
-
-
-task contains conditional effects. turning off state domination.
-
  --- OK.
- Match tree built with 47 nodes.
+ Match tree built with 36 nodes.
 
 PDDL problem description loaded: 
 	Domain: RESTAURANTC
 	Problem: PROBLEM3
-	#Actions: 47
-	#Fluents: 45
+	#Actions: 36
+	#Fluents: 40
 Landmarks found: 4
 Starting search with IW (time budget is 60 secs)...
 rel_plan size: 11
-#RP_fluents 31
+#RP_fluents 17
 Caption
 {#goals, #UNnachieved,  #Achieved} -> IW(max_w)
 
-{4/4/0}:IW(1) -> [2][3][4]rel_plan size: 11
-#RP_fluents 31
-{4/3/1}:IW(1) -> [2][3][4][5][6][7][8][9][10][11][12][13][14]rel_plan size: 8
-#RP_fluents 25
-{4/2/2}:IW(1) -> [2][3][4][5][6][7][8]rel_plan size: 7
-#RP_fluents 23
-{4/1/3}:IW(1) -> [2][3][4][5][6][7][8][9][10][11]rel_plan size: 0
-#RP_fluents 0Plan found with cost: 33
-Total time: 0.000715
-Nodes generated during search: 337
-Nodes expanded during search: 278
+{4/4/0}:IW(1) -> [2][3][4][5][6][7][8][9][10]rel_plan size: 9
+#RP_fluents 14
+{4/3/1}:IW(1) -> [2][3][4][5][6][7][8][9][10][11][12]rel_plan size: 8
+#RP_fluents 12
+{4/2/2}:IW(1) -> [2][3][4][5][6][7][8][9][10][11]rel_plan size: 2
+#RP_fluents 2
+{4/1/3}:IW(1) -> [2][3]rel_plan size: 0
+#RP_fluents 0Plan found with cost: 32
+Total time: 0.000369
+Nodes generated during search: 159
+Nodes expanded during search: 143
 IW search completed
 
-
-
-task contains conditional effects. turning off state domination.
-
  --- OK.
- Match tree built with 47 nodes.
+ Match tree built with 36 nodes.
 
 PDDL problem description loaded: 
 	Domain: RESTAURANTC
 	Problem: PROBLEM3
-	#Actions: 47
-	#Fluents: 45
+	#Actions: 36
+	#Fluents: 40
 Landmarks found: 4
 Starting search with IW (time budget is 60 secs)...
 rel_plan size: 11
-#RP_fluents 31
+#RP_fluents 17
 Caption
 {#goals, #UNnachieved,  #Achieved} -> IW(max_w)
 
-{4/4/0}:IW(1) -> [2][3][4]rel_plan size: 11
-#RP_fluents 31
-{4/3/1}:IW(1) -> [2][3][4][5][6][7][8][9][10][11][12][13][14]rel_plan size: 8
-#RP_fluents 25
-{4/2/2}:IW(1) -> [2][3][4][5][6][7][8]rel_plan size: 7
-#RP_fluents 23
-{4/1/3}:IW(1) -> [2][3][4][5][6][7][8][9][10][11]rel_plan size: 0
-#RP_fluents 0Plan found with cost: 33
-Total time: 0.000715
-Nodes generated during search: 337
-Nodes expanded during search: 278
+{4/4/0}:IW(1) -> [2][3][4][5][6][7][8][9][10]rel_plan size: 9
+#RP_fluents 14
+{4/3/1}:IW(1) -> [2][3][4][5][6][7][8][9][10][11][12]rel_plan size: 8
+#RP_fluents 12
+{4/2/2}:IW(1) -> [2][3][4][5][6][7][8][9][10][11]rel_plan size: 2
+#RP_fluents 2
+{4/1/3}:IW(1) -> [2][3]rel_plan size: 0
+#RP_fluents 0Plan found with cost: 32
+Total time: 0.000369
+Nodes generated during search: 159
+Nodes expanded during search: 143
 IW search completed
 
 
 Plan found:
-0.00100: (move robot ala ama)
-0.00200: (move robot ama aua)
-0.00300: (move robot aua pua)
-0.00400: (move robot pua aua)
-0.00500: (move robot aua ama)
-0.00600: (pick-up robot plate3 ama)
-0.00700: (move robot ama aua)
-0.00800: (move robot aua bta)
-0.00900: (fill robot plate3 bta)
-0.01000: (move robot bta aua)
-0.01100: (move robot aua ama)
-0.01200: (move robot ama ala)
-0.01300: (move robot ala pla)
-0.01400: (move robot pla pma)
-0.01500: (present robot plate3 customer1 pma)
-0.01600: (move robot pma pua)
-0.01700: (move robot pua pma)
-0.01800: (pick-up robot plate3 pma)
-0.01900: (move robot pma pla)
-0.02000: (present robot plate3 customer3 pla)
-0.02100: (pick-up robot plate1 pla)
-0.02200: (move robot pla pma)
-0.02300: (move robot pma pua)
-0.02400: (move robot pua aua)
-0.02500: (move robot aua bta)
-0.02600: (fill robot plate1 bta)
-0.02700: (move robot bta aua)
-0.02800: (move robot aua ama)
-0.02900: (move robot ama ala)
-0.03000: (present robot plate1 customer2 ala)
-0.03100: (move robot ala ama)
-0.03200: (move robot ama aua)
-0.03300: (move robot aua pua)
-Metric: 0.033
-Makespan: 0.033
+0.00100: (pick-up robot plate2 ala)
+0.00200: (move robot ala ama)
+0.00300: (move robot ama aua)
+0.00400: (move robot aua bta)
+0.00500: (fill robot plate2 bta)
+0.00600: (move robot bta aua)
+0.00700: (move robot aua pua)
+0.00800: (move robot pua pma)
+0.00900: (present robot plate2 pma customer1)
+0.01000: (move robot pma pla)
+0.01100: (pick-up robot plate1 pla)
+0.01200: (move robot pla pma)
+0.01300: (move robot pma pua)
+0.01400: (move robot pua aua)
+0.01500: (move robot aua bta)
+0.01600: (fill robot plate1 bta)
+0.01700: (move robot bta aua)
+0.01800: (move robot aua ama)
+0.01900: (move robot ama ala)
+0.02000: (present robot plate1 ala customer2)
+0.02100: (move robot ala ama)
+0.02200: (pick-up robot plate3 ama)
+0.02300: (move robot ama aua)
+0.02400: (move robot aua bta)
+0.02500: (fill robot plate3 bta)
+0.02600: (move robot bta aua)
+0.02700: (move robot aua pua)
+0.02800: (move robot pua pma)
+0.02900: (move robot pma pla)
+0.03000: (present robot plate3 pla customer3)
+0.03100: (move robot pla pma)
+0.03200: (move robot pma pua)
+Metric: 0.032
+Makespan: 0.032
 States evaluated: undefined
-Planner found 1 plan(s) in 0.447secs.
+Planner found 1 plan(s) in 0.384secs.

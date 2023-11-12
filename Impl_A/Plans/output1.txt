@@ -1,58 +1,66 @@
 Planning service: https://solver.planning.domains/solve
-Domain: restaurantB, Problem: problem1
+Domain: restaurantA, Problem: problem1
+
+
+task contains conditional effects. turning off state domination.
+
  --- OK.
- Match tree built with 17 nodes.
+ Match tree built with 23 nodes.
 
 PDDL problem description loaded: 
-	Domain: RESTAURANTB
+	Domain: RESTAURANTA
 	Problem: PROBLEM1
-	#Actions: 17
-	#Fluents: 15
+	#Actions: 23
+	#Fluents: 23
 Landmarks found: 2
 Starting search with IW (time budget is 60 secs)...
 rel_plan size: 8
-#RP_fluents 11
+#RP_fluents 16
 Caption
 {#goals, #UNnachieved,  #Achieved} -> IW(max_w)
 
-{2/2/0}:IW(1) -> [2][3][4][5][6][7][8][9][10][11][12][13][14][15]rel_plan size: 2
-#RP_fluents 2
-{2/1/1}:IW(1) -> [2][3]rel_plan size: 0
+{2/2/0}:IW(1) -> [2]rel_plan size: 7
+#RP_fluents 14
+{2/1/1}:IW(1) -> [2][3][4][5][6][7][8][9][10][11][12][13][14][15][16]rel_plan size: 0
 #RP_fluents 0Plan found with cost: 16
-Total time: 0.000155
-Nodes generated during search: 61
-Nodes expanded during search: 57
+Total time: 0.000182
+Nodes generated during search: 47
+Nodes expanded during search: 42
 IW search completed
 
+
+
+task contains conditional effects. turning off state domination.
+
  --- OK.
- Match tree built with 17 nodes.
+ Match tree built with 23 nodes.
 
 PDDL problem description loaded: 
-	Domain: RESTAURANTB
+	Domain: RESTAURANTA
 	Problem: PROBLEM1
-	#Actions: 17
-	#Fluents: 15
+	#Actions: 23
+	#Fluents: 23
 Landmarks found: 2
 Starting search with IW (time budget is 60 secs)...
 rel_plan size: 8
-#RP_fluents 11
+#RP_fluents 16
 Caption
 {#goals, #UNnachieved,  #Achieved} -> IW(max_w)
 
-{2/2/0}:IW(1) -> [2][3][4][5][6][7][8][9][10][11][12][13][14][15]rel_plan size: 2
-#RP_fluents 2
-{2/1/1}:IW(1) -> [2][3]rel_plan size: 0
+{2/2/0}:IW(1) -> [2]rel_plan size: 7
+#RP_fluents 14
+{2/1/1}:IW(1) -> [2][3][4][5][6][7][8][9][10][11][12][13][14][15][16]rel_plan size: 0
 #RP_fluents 0Plan found with cost: 16
-Total time: 0.000155
-Nodes generated during search: 61
-Nodes expanded during search: 57
+Total time: 0.000182
+Nodes generated during search: 47
+Nodes expanded during search: 42
 IW search completed
 
 
 Plan found:
-0.00100: (move robot aua ama)
-0.00200: (move robot ama ala)
-0.00300: (move robot ala pla)
+0.00100: (move robot aua pua)
+0.00200: (move robot pua pma)
+0.00300: (move robot pma pla)
 0.00400: (pick-up robot plate1 pla)
 0.00500: (move robot pla pma)
 0.00600: (move robot pma pua)
@@ -63,10 +71,10 @@ Plan found:
 0.01100: (move robot aua ama)
 0.01200: (move robot ama ala)
 0.01300: (move robot ala pla)
-0.01400: (present robot plate1 pla customer1)
+0.01400: (present robot plate1 customer1 pla)
 0.01500: (move robot pla pma)
 0.01600: (move robot pma pua)
 Metric: 0.016
 Makespan: 0.016
 States evaluated: undefined
-Planner found 1 plan(s) in 0.377secs.
+Planner found 1 plan(s) in 0.489secs.

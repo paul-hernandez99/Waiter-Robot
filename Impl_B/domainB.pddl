@@ -1,4 +1,4 @@
-(define (domain restaurantA)
+(define (domain restaurantB)
 	(:requirements :strips :adl :typing :fluents)
 
 	(:types
@@ -16,6 +16,7 @@
 		(holding ?r - robot ?p - plate)
 		(served ?c - customer)
 		(buffet ?loc - location)
+		(isServed ?p - plate)
 	)
 
 	(:action pick-up
@@ -24,6 +25,7 @@
 			(at ?r ?loc)
 			(at ?p ?loc)
 			(not (hasPlate ?r))
+			(not (isServed ?p))
 		)
 		:effect (and
 			(holding ?r ?p)
@@ -44,6 +46,7 @@
 			(served ?c)
 			(not (holding ?r ?p))
 			(not (hasPlate ?r))
+			(isServed ?p)
 		)
 	)
 

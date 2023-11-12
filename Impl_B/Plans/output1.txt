@@ -1,17 +1,17 @@
 Planning service: https://solver.planning.domains/solve
-Domain: restaurantA, Problem: problem1
+Domain: restaurantB, Problem: problem1
  --- OK.
  Match tree built with 37 nodes.
 
 PDDL problem description loaded: 
-	Domain: RESTAURANTA
+	Domain: RESTAURANTB
 	Problem: PROBLEM1
 	#Actions: 37
-	#Fluents: 21
+	#Fluents: 23
 Landmarks found: 2
 Starting search with IW (time budget is 60 secs)...
 rel_plan size: 8
-#RP_fluents 10
+#RP_fluents 11
 Caption
 {#goals, #UNnachieved,  #Achieved} -> IW(max_w)
 
@@ -19,8 +19,8 @@ Caption
 #RP_fluents 2
 {2/1/1}:IW(1) -> [2][3]rel_plan size: 0
 #RP_fluents 0Plan found with cost: 16
-Total time: 0.000173
-Nodes generated during search: 65
+Total time: 0.000169
+Nodes generated during search: 64
 Nodes expanded during search: 61
 IW search completed
 
@@ -28,14 +28,14 @@ IW search completed
  Match tree built with 37 nodes.
 
 PDDL problem description loaded: 
-	Domain: RESTAURANTA
+	Domain: RESTAURANTB
 	Problem: PROBLEM1
 	#Actions: 37
-	#Fluents: 21
+	#Fluents: 23
 Landmarks found: 2
 Starting search with IW (time budget is 60 secs)...
 rel_plan size: 8
-#RP_fluents 10
+#RP_fluents 11
 Caption
 {#goals, #UNnachieved,  #Achieved} -> IW(max_w)
 
@@ -43,8 +43,8 @@ Caption
 #RP_fluents 2
 {2/1/1}:IW(1) -> [2][3]rel_plan size: 0
 #RP_fluents 0Plan found with cost: 16
-Total time: 0.000173
-Nodes generated during search: 65
+Total time: 0.000169
+Nodes generated during search: 64
 Nodes expanded during search: 61
 IW search completed
 
@@ -69,4 +69,4 @@ Plan found:
 Metric: 0.016
 Makespan: 0.016
 States evaluated: undefined
-Planner found 1 plan(s) in 0.378secs.
+Planner found 1 plan(s) in 0.42secs.

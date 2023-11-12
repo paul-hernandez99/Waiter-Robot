@@ -6,7 +6,7 @@
 0.00300: (move robot bta aua)
 0.00400: (move robot aua pua)
 0.00500: (move robot pua pma)
-0.00600: (present robot plate1 customer1 pma)
+0.00600: (present robot plate1 pma customer1)
 0.00700: (move robot pma pua)
 0.00800: (move robot pua aua)
 0.00900: (move robot aua bta)
