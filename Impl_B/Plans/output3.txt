@@ -1,0 +1,82 @@
+Planning service: https://solver.planning.domains/solve
+Domain: restaurantA, Problem: problem3
+ --- OK.
+ Match tree built with 89 nodes.
+
+PDDL problem description loaded: 
+	Domain: RESTAURANTA
+	Problem: PROBLEM3
+	#Actions: 89
+	#Fluents: 45
+Landmarks found: 4
+Starting search with IW (time budget is 60 secs)...
+rel_plan size: 11
+#RP_fluents 13
+Caption
+{#goals, #UNnachieved,  #Achieved} -> IW(max_w)
+
+{4/4/0}:IW(1) -> [2][3][4][5][6][7][8][9][10]rel_plan size: 6
+#RP_fluents 8
+{4/3/1}:IW(1) -> [2][3][4]rel_plan size: 5
+#RP_fluents 7
+{4/2/2}:IW(1) -> [2][3][4]rel_plan size: 3
+#RP_fluents 3
+{4/1/3}:IW(1) -> [2][3][4]rel_plan size: 0
+#RP_fluents 0Plan found with cost: 18
+Total time: 0.000501
+Nodes generated during search: 148
+Nodes expanded during search: 110
+IW search completed
+
+ --- OK.
+ Match tree built with 89 nodes.
+
+PDDL problem description loaded: 
+	Domain: RESTAURANTA
+	Problem: PROBLEM3
+	#Actions: 89
+	#Fluents: 45
+Landmarks found: 4
+Starting search with IW (time budget is 60 secs)...
+rel_plan size: 11
+#RP_fluents 13
+Caption
+{#goals, #UNnachieved,  #Achieved} -> IW(max_w)
+
+{4/4/0}:IW(1) -> [2][3][4][5][6][7][8][9][10]rel_plan size: 6
+#RP_fluents 8
+{4/3/1}:IW(1) -> [2][3][4]rel_plan size: 5
+#RP_fluents 7
+{4/2/2}:IW(1) -> [2][3][4]rel_plan size: 3
+#RP_fluents 3
+{4/1/3}:IW(1) -> [2][3][4]rel_plan size: 0
+#RP_fluents 0Plan found with cost: 18
+Total time: 0.000501
+Nodes generated during search: 148
+Nodes expanded during search: 110
+IW search completed
+
+
+Plan found:
+0.00100: (pick-up robot plate2 ala)
+0.00200: (move_plate robot plate2 ala ama)
+0.00300: (move_plate robot plate2 ama aua)
+0.00400: (move_plate robot plate2 aua bta)
+0.00500: (fill robot plate2 bta)
+0.00600: (move_plate robot plate2 bta aua)
+0.00700: (move_plate robot plate2 aua pua)
+0.00800: (move_plate robot plate2 pua pma)
+0.00900: (present robot plate2 pma customer1)
+0.01000: (pick-up robot plate2 pma)
+0.01100: (move_plate robot plate2 pma pla)
+0.01200: (present robot plate2 pla customer3)
+0.01300: (pick-up robot plate2 pla)
+0.01400: (move_plate robot plate2 pla ala)
+0.01500: (present robot plate2 ala customer2)
+0.01600: (move robot ala ama)
+0.01700: (move robot ama aua)
+0.01800: (move robot aua pua)
+Metric: 0.018000000000000002
+Makespan: 0.018000000000000002
+States evaluated: undefined
+Planner found 1 plan(s) in 0.393secs.

@@ -1,5 +1,5 @@
-(define (problem problem3)
-  (:domain restaurant2)
+(define (problem problem2)
+  (:domain restaurantB)
   
   ;; Define objects
 
@@ -18,13 +18,13 @@
 
     ;; Robot initialization
 
-    (at robot ALA)
+    (at robot BTA)
 
     ;; Plate initialization
 
-    (at plate1 PLA)
-    (at plate2 ALA)
-    (at plate3 AMA)
+    (at plate1 BTA)
+    (at plate2 BTA)
+    (at plate3 BTA)
 
     ;; Customer initialization
 
@@ -50,8 +50,8 @@
 
   (:goal
     (and 
-        (at robot PUA)
-        (served customer1) (served customer2) (served customer3)
+      (at robot BTA)
+      (served customer1) (served customer2) (served customer3)
     )
   )
 )

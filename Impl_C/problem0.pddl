@@ -1,5 +1,5 @@
 (define (problem problem0)
-  (:domain restaurant2)
+  (:domain restaurantC)
   
   ;; Define objects
 

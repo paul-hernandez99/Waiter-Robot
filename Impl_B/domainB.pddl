@@ -1,11 +1,11 @@
-(define (domain restaurant2)
+(define (domain restaurantA)
 	(:requirements :strips :adl :typing :fluents)
-	
-	(:types 
-        robot - object
-        location
-        customer - object
-        plate - object
+
+	(:types
+		robot - object
+		customer - object
+		plate - object
+		location
 	)
 
 	(:predicates
@@ -28,7 +28,6 @@
 		:effect (and
 			(holding ?r ?p)
 			(hasPlate ?r)
-			(not (at ?p ?loc))
 		)
 	)
 
@@ -45,7 +44,6 @@
 			(served ?c)
 			(not (holding ?r ?p))
 			(not (hasPlate ?r))
-			(at ?p ?loc)
 		)
 	)
 
@@ -67,10 +65,26 @@
 		:precondition (and
 			(at ?r ?loc1)
 			(adjacent ?loc1 ?loc2)
+			(not (hasPlate ?r))
 		)
 		:effect (and
 			(at ?r ?loc2)
 			(not (at ?r ?loc1))
+		)
+	)
+
+	(:action move_plate
+		:parameters (?r - robot ?p - plate ?loc1 - location ?loc2 - location)
+		:precondition (and
+			(at ?r ?loc1)
+			(adjacent ?loc1 ?loc2)
+			(holding ?r ?p)
+		)
+		:effect (and
+			(at ?r ?loc2)
+			(not (at ?r ?loc1))
+			(at ?p ?loc2)
+			(not (at ?p ?loc1))
 		)
 	)
 )

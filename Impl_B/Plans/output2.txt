@@ -1,0 +1,79 @@
+Planning service: https://solver.planning.domains/solve
+Domain: restaurantA, Problem: problem2
+ --- OK.
+ Match tree built with 89 nodes.
+
+PDDL problem description loaded: 
+	Domain: RESTAURANTA
+	Problem: PROBLEM2
+	#Actions: 89
+	#Fluents: 45
+Landmarks found: 4
+Starting search with IW (time budget is 60 secs)...
+rel_plan size: 11
+#RP_fluents 13
+Caption
+{#goals, #UNnachieved,  #Achieved} -> IW(max_w)
+
+{4/4/0}:IW(1) -> [2][3][4][5][6][7]rel_plan size: 8
+#RP_fluents 10
+{4/3/1}:IW(1) -> [2][3][4]rel_plan size: 7
+#RP_fluents 9
+{4/2/2}:IW(1) -> [2][3][4]rel_plan size: 3
+#RP_fluents 3
+{4/1/3}:IW(1) -> [2][3][4]rel_plan size: 0
+#RP_fluents 0Plan found with cost: 15
+Total time: 0.00025
+Nodes generated during search: 100
+Nodes expanded during search: 65
+IW search completed
+
+ --- OK.
+ Match tree built with 89 nodes.
+
+PDDL problem description loaded: 
+	Domain: RESTAURANTA
+	Problem: PROBLEM2
+	#Actions: 89
+	#Fluents: 45
+Landmarks found: 4
+Starting search with IW (time budget is 60 secs)...
+rel_plan size: 11
+#RP_fluents 13
+Caption
+{#goals, #UNnachieved,  #Achieved} -> IW(max_w)
+
+{4/4/0}:IW(1) -> [2][3][4][5][6][7]rel_plan size: 8
+#RP_fluents 10
+{4/3/1}:IW(1) -> [2][3][4]rel_plan size: 7
+#RP_fluents 9
+{4/2/2}:IW(1) -> [2][3][4]rel_plan size: 3
+#RP_fluents 3
+{4/1/3}:IW(1) -> [2][3][4]rel_plan size: 0
+#RP_fluents 0Plan found with cost: 15
+Total time: 0.00025
+Nodes generated during search: 100
+Nodes expanded during search: 65
+IW search completed
+
+
+Plan found:
+0.00100: (pick-up robot plate1 bta)
+0.00200: (fill robot plate1 bta)
+0.00300: (move_plate robot plate1 bta aua)
+0.00400: (move_plate robot plate1 aua ama)
+0.00500: (move_plate robot plate1 ama ala)
+0.00600: (present robot plate1 ala customer2)
+0.00700: (pick-up robot plate1 ala)
+0.00800: (move_plate robot plate1 ala pla)
+0.00900: (present robot plate1 pla customer3)
+0.01000: (pick-up robot plate1 pla)
+0.01100: (move_plate robot plate1 pla pma)
+0.01200: (present robot plate1 pma customer1)
+0.01300: (move robot pma pua)
+0.01400: (move robot pua aua)
+0.01500: (move robot aua bta)
+Metric: 0.015
+Makespan: 0.015
+States evaluated: undefined
+Planner found 1 plan(s) in 0.36secs.

@@ -1,0 +1,24 @@
+;;!domain: restaurantA
+;;!problem: problem3
+
+0.00100: (pick-up robot plate2 ala)
+0.00200: (move robot ala ama)
+0.00300: (move robot ama aua)
+0.00400: (move robot aua bta)
+0.00500: (fill robot plate2 bta)
+0.00600: (move robot bta aua)
+0.00700: (move robot aua pua)
+0.00800: (move robot pua pma)
+0.00900: (present robot plate2 pma customer1)
+0.01000: (pick-up robot plate2 pma)
+0.01100: (move robot pma pla)
+0.01200: (present robot plate2 pla customer3)
+0.01300: (pick-up robot plate2 pla)
+0.01400: (move robot pla ala)
+0.01500: (present robot plate2 ala customer2)
+0.01600: (move robot ala ama)
+0.01700: (move robot ama aua)
+0.01800: (move robot aua pua)
+
+; Makespan: 0.018000000000000002
+; Metric: 0.018000000000000002

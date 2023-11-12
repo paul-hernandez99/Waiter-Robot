@@ -1,12 +1,16 @@
-(define (problem problem1)
-  (:domain restaurant2)
+(define (problem problem3)
+  (:domain restaurantC)
   
   ;; Define objects
 
   (:objects
     robot - robot
     plate1 - plate
+    plate2 - plate
+    plate3 - plate
     customer1 - customer
+    customer2 - customer
+    customer3 - customer
     BTA AMA AUA PLA PMA PUA ALA - location
   )
   
@@ -14,15 +18,19 @@
 
     ;; Robot initialization
 
-    (at robot AUA)
+    (at robot ALA)
 
     ;; Plate initialization
 
     (at plate1 PLA)
+    (at plate2 ALA)
+    (at plate3 AMA)
 
     ;; Customer initialization
 
-    (at customer1 PLA)
+    (at customer1 PMA)
+    (at customer2 ALA)
+    (at customer3 PLA)
 
     ;; Define adjacent rooms
 
@@ -43,7 +51,7 @@
   (:goal
     (and 
         (at robot PUA)
-        (served customer1)
+        (served customer1) (served customer2) (served customer3)
     )
   )
 )

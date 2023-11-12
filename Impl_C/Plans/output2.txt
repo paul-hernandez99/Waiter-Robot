@@ -1,0 +1,101 @@
+Planning service: https://solver.planning.domains/solve
+Domain: restaurantC, Problem: problem2
+
+
+task contains conditional effects. turning off state domination.
+
+ --- OK.
+ Match tree built with 47 nodes.
+
+PDDL problem description loaded: 
+	Domain: RESTAURANTC
+	Problem: PROBLEM2
+	#Actions: 47
+	#Fluents: 45
+Landmarks found: 4
+Starting search with IW (time budget is 60 secs)...
+rel_plan size: 13
+#RP_fluents 33
+Caption
+{#goals, #UNnachieved,  #Achieved} -> IW(max_w)
+
+{4/4/0}:IW(1) -> rel_plan size: 13
+#RP_fluents 33
+{4/3/1}:IW(1) -> [2][3][4][5][6][7][8][9][10]rel_plan size: 8
+#RP_fluents 22
+{4/2/2}:IW(1) -> [2][3][4][5][6][7][8][9][10]rel_plan size: 7
+#RP_fluents 21
+{4/1/3}:IW(1) -> [2][3][4][5][6][7][8][9][10][11][12]rel_plan size: 0
+#RP_fluents 0Plan found with cost: 29
+Total time: 0.000918
+Nodes generated during search: 501
+Nodes expanded during search: 423
+IW search completed
+
+
+
+task contains conditional effects. turning off state domination.
+
+ --- OK.
+ Match tree built with 47 nodes.
+
+PDDL problem description loaded: 
+	Domain: RESTAURANTC
+	Problem: PROBLEM2
+	#Actions: 47
+	#Fluents: 45
+Landmarks found: 4
+Starting search with IW (time budget is 60 secs)...
+rel_plan size: 13
+#RP_fluents 33
+Caption
+{#goals, #UNnachieved,  #Achieved} -> IW(max_w)
+
+{4/4/0}:IW(1) -> rel_plan size: 13
+#RP_fluents 33
+{4/3/1}:IW(1) -> [2][3][4][5][6][7][8][9][10]rel_plan size: 8
+#RP_fluents 22
+{4/2/2}:IW(1) -> [2][3][4][5][6][7][8][9][10]rel_plan size: 7
+#RP_fluents 21
+{4/1/3}:IW(1) -> [2][3][4][5][6][7][8][9][10][11][12]rel_plan size: 0
+#RP_fluents 0Plan found with cost: 29
+Total time: 0.000918
+Nodes generated during search: 501
+Nodes expanded during search: 423
+IW search completed
+
+
+Plan found:
+0.00100: (pick-up robot plate3 bta)
+0.00200: (fill robot plate3 bta)
+0.00300: (move robot bta aua)
+0.00400: (move robot aua ama)
+0.00500: (move robot ama ala)
+0.00600: (present robot plate3 customer2 ala)
+0.00700: (move robot ala ama)
+0.00800: (move robot ama aua)
+0.00900: (move robot aua bta)
+0.01000: (pick-up robot plate2 bta)
+0.01100: (fill robot plate2 bta)
+0.01200: (move robot bta aua)
+0.01300: (move robot aua pua)
+0.01400: (move robot pua pma)
+0.01500: (present robot plate2 customer1 pma)
+0.01600: (move robot pma pua)
+0.01700: (move robot pua aua)
+0.01800: (move robot aua bta)
+0.01900: (pick-up robot plate1 bta)
+0.02000: (fill robot plate1 bta)
+0.02100: (move robot bta aua)
+0.02200: (move robot aua ama)
+0.02300: (move robot ama ala)
+0.02400: (move robot ala pla)
+0.02500: (present robot plate1 customer3 pla)
+0.02600: (move robot pla pma)
+0.02700: (move robot pma pua)
+0.02800: (move robot pua aua)
+0.02900: (move robot aua bta)
+Metric: 0.029
+Makespan: 0.029
+States evaluated: undefined
+Planner found 1 plan(s) in 0.517secs.

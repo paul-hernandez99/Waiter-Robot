@@ -1,4 +1,4 @@
-(define (domain domain)
+(define (domain restaurantC)
     (:requirements :adl )
     
     (:types
@@ -43,7 +43,7 @@
         :effect (and
             (served ?c)
             (not (holding ?r ?p))
-            (not (hasPlate ?r))
+            (not (hasPlate ?r)) 
         )
     )
     
@@ -52,7 +52,7 @@
         :precondition (and
             (at ?r ?loc)
 			(buffet ?loc)
-            (holding ?p)
+            (holding ?r ?p)
             (not (hasFood ?p))
         )
         :effect (and
@@ -68,9 +68,9 @@
         )
         :effect (and
             (at ?r ?loc2)
-            (not (at-robot ?loc1))
+            (not (at ?r ?loc1))
             (forall (?p - plate) 
-                (when (holding ?p)
+                (when (holding ?r ?p)
                     (and (at ?p ?loc2)
                     (not (at ?p ?loc1)))
                 )

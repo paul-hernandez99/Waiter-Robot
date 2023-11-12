@@ -1,0 +1,80 @@
+Planning service: https://solver.planning.domains/solve
+Domain: restaurantC, Problem: problem1
+
+
+task contains conditional effects. turning off state domination.
+
+ --- OK.
+ Match tree built with 23 nodes.
+
+PDDL problem description loaded: 
+	Domain: RESTAURANTC
+	Problem: PROBLEM1
+	#Actions: 23
+	#Fluents: 21
+Landmarks found: 2
+Starting search with IW (time budget is 60 secs)...
+rel_plan size: 8
+#RP_fluents 15
+Caption
+{#goals, #UNnachieved,  #Achieved} -> IW(max_w)
+
+{2/2/0}:IW(1) -> [2]rel_plan size: 7
+#RP_fluents 13
+{2/1/1}:IW(1) -> [2][3][4][5][6][7][8][9][10][11][12][13][14][15][16]rel_plan size: 0
+#RP_fluents 0Plan found with cost: 16
+Total time: 0.000156
+Nodes generated during search: 50
+Nodes expanded during search: 43
+IW search completed
+
+
+
+task contains conditional effects. turning off state domination.
+
+ --- OK.
+ Match tree built with 23 nodes.
+
+PDDL problem description loaded: 
+	Domain: RESTAURANTC
+	Problem: PROBLEM1
+	#Actions: 23
+	#Fluents: 21
+Landmarks found: 2
+Starting search with IW (time budget is 60 secs)...
+rel_plan size: 8
+#RP_fluents 15
+Caption
+{#goals, #UNnachieved,  #Achieved} -> IW(max_w)
+
+{2/2/0}:IW(1) -> [2]rel_plan size: 7
+#RP_fluents 13
+{2/1/1}:IW(1) -> [2][3][4][5][6][7][8][9][10][11][12][13][14][15][16]rel_plan size: 0
+#RP_fluents 0Plan found with cost: 16
+Total time: 0.000156
+Nodes generated during search: 50
+Nodes expanded during search: 43
+IW search completed
+
+
+Plan found:
+0.00100: (move robot aua pua)
+0.00200: (move robot pua pma)
+0.00300: (move robot pma pla)
+0.00400: (pick-up robot plate1 pla)
+0.00500: (move robot pla pma)
+0.00600: (move robot pma pua)
+0.00700: (move robot pua aua)
+0.00800: (move robot aua bta)
+0.00900: (fill robot plate1 bta)
+0.01000: (move robot bta aua)
+0.01100: (move robot aua ama)
+0.01200: (move robot ama ala)
+0.01300: (move robot ala pla)
+0.01400: (present robot plate1 customer1 pla)
+0.01500: (move robot pla pma)
+0.01600: (move robot pma pua)
+Metric: 0.016
+Makespan: 0.016
+States evaluated: undefined
+Planner found 1 plan(s) in 0.383secs.

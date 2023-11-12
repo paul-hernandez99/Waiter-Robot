@@ -1,0 +1,72 @@
+Planning service: https://solver.planning.domains/solve
+Domain: restaurantA, Problem: problem1
+ --- OK.
+ Match tree built with 37 nodes.
+
+PDDL problem description loaded: 
+	Domain: RESTAURANTA
+	Problem: PROBLEM1
+	#Actions: 37
+	#Fluents: 21
+Landmarks found: 2
+Starting search with IW (time budget is 60 secs)...
+rel_plan size: 8
+#RP_fluents 10
+Caption
+{#goals, #UNnachieved,  #Achieved} -> IW(max_w)
+
+{2/2/0}:IW(1) -> [2][3][4][5][6][7][8][9][10][11][12][13][14][15]rel_plan size: 2
+#RP_fluents 2
+{2/1/1}:IW(1) -> [2][3]rel_plan size: 0
+#RP_fluents 0Plan found with cost: 16
+Total time: 0.000173
+Nodes generated during search: 65
+Nodes expanded during search: 61
+IW search completed
+
+ --- OK.
+ Match tree built with 37 nodes.
+
+PDDL problem description loaded: 
+	Domain: RESTAURANTA
+	Problem: PROBLEM1
+	#Actions: 37
+	#Fluents: 21
+Landmarks found: 2
+Starting search with IW (time budget is 60 secs)...
+rel_plan size: 8
+#RP_fluents 10
+Caption
+{#goals, #UNnachieved,  #Achieved} -> IW(max_w)
+
+{2/2/0}:IW(1) -> [2][3][4][5][6][7][8][9][10][11][12][13][14][15]rel_plan size: 2
+#RP_fluents 2
+{2/1/1}:IW(1) -> [2][3]rel_plan size: 0
+#RP_fluents 0Plan found with cost: 16
+Total time: 0.000173
+Nodes generated during search: 65
+Nodes expanded during search: 61
+IW search completed
+
+
+Plan found:
+0.00100: (move robot aua ama)
+0.00200: (move robot ama ala)
+0.00300: (move robot ala pla)
+0.00400: (pick-up robot plate1 pla)
+0.00500: (move_plate robot plate1 pla pma)
+0.00600: (move_plate robot plate1 pma pua)
+0.00700: (move_plate robot plate1 pua aua)
+0.00800: (move_plate robot plate1 aua bta)
+0.00900: (fill robot plate1 bta)
+0.01000: (move_plate robot plate1 bta aua)
+0.01100: (move_plate robot plate1 aua ama)
+0.01200: (move_plate robot plate1 ama ala)
+0.01300: (move_plate robot plate1 ala pla)
+0.01400: (present robot plate1 pla customer1)
+0.01500: (move robot pla pma)
+0.01600: (move robot pma pua)
+Metric: 0.016
+Makespan: 0.016
+States evaluated: undefined
+Planner found 1 plan(s) in 0.378secs.

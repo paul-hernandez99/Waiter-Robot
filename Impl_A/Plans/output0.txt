@@ -1,0 +1,65 @@
+Planning service: https://solver.planning.domains/solve
+Domain: restaurantB, Problem: problem0
+ --- OK.
+ Match tree built with 18 nodes.
+
+PDDL problem description loaded: 
+	Domain: RESTAURANTB
+	Problem: PROBLEM0
+	#Actions: 18
+	#Fluents: 16
+Landmarks found: 3
+Starting search with IW (time budget is 60 secs)...
+rel_plan size: 7
+#RP_fluents 9
+Caption
+{#goals, #UNnachieved,  #Achieved} -> IW(max_w)
+
+{3/3/0}:IW(1) -> [2][3][4][5][6][7]rel_plan size: 3
+#RP_fluents 3
+{3/1/2}:IW(1) -> [2][3][4]rel_plan size: 0
+#RP_fluents 0Plan found with cost: 9
+Total time: 0.00017
+Nodes generated during search: 46
+Nodes expanded during search: 34
+IW search completed
+
+ --- OK.
+ Match tree built with 18 nodes.
+
+PDDL problem description loaded: 
+	Domain: RESTAURANTB
+	Problem: PROBLEM0
+	#Actions: 18
+	#Fluents: 16
+Landmarks found: 3
+Starting search with IW (time budget is 60 secs)...
+rel_plan size: 7
+#RP_fluents 9
+Caption
+{#goals, #UNnachieved,  #Achieved} -> IW(max_w)
+
+{3/3/0}:IW(1) -> [2][3][4][5][6][7]rel_plan size: 3
+#RP_fluents 3
+{3/1/2}:IW(1) -> [2][3][4]rel_plan size: 0
+#RP_fluents 0Plan found with cost: 9
+Total time: 0.00017
+Nodes generated during search: 46
+Nodes expanded during search: 34
+IW search completed
+
+
+Plan found:
+0.00100: (pick-up robot plate1 bta)
+0.00200: (fill robot plate1 bta)
+0.00300: (move robot bta aua)
+0.00400: (move robot aua pua)
+0.00500: (move robot pua pma)
+0.00600: (present robot plate1 pma customer1)
+0.00700: (move robot pma pua)
+0.00800: (move robot pua aua)
+0.00900: (move robot aua bta)
+Metric: 0.009000000000000001
+Makespan: 0.009000000000000001
+States evaluated: undefined
+Planner found 1 plan(s) in 0.45secs.
