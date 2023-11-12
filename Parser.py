@@ -34,7 +34,7 @@ for i in range(4):
 
     print(f"""
         \\textbf{{Total time}} & {values[0][0]} & {values[1][0]} & {values[2][0]} \\\\\\hline
-        \\textbf{{Nodes generated}} & {values[0][1]} & {values[1][1]} & {values[2][1]} \\\\\\hline
-        \\textbf{{Nodes expanded}} & {values[0][2]} & {values[1][2]} & {values[2][2]} \\\\\\hline
-        \\textbf{{Cost}} & {values[0][3]} & {values[1][3]} & {values[2][3]} \\\\\\hline
+        \\textbf{{Cost}} & {values[0][1]} & {values[1][1]} & {values[2][1]} \\\\\\hline
+        \\textbf{{Nodes generated}} & {values[0][2]} & {values[1][2]} & {values[2][2]} \\\\\\hline
+        \\textbf{{Nodes expanded}} & {values[0][3]} & {values[1][3]} & {values[2][3]} \\\\\\hline
 """)
