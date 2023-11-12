@@ -2,77 +2,77 @@
     (:requirements :adl )
     
     (:types
+        robot - object
         location
         customer - object
         plate - object
     )
     
     (:predicates
-        (adjacent ?x - location ?y - location)
-        (at-robot ?x - location)
-        (at ?x - object ?y - location)
-
-        (holding ?p - plate)
-        (has-food ?p - plate)
+        (at ?obj - object ?loc2 - location)
+        (adjacent ?loc1 - location ?loc2 - location)
+        (hasFood ?p - plate)
+        (hasPlate ?r - robot)
+        (holding ?r -robot ?p - plate)
         (served ?c - customer)
-
-        (empty-handed-robot)
-        (is-bta ?x - location)
+        (buffet ?loc - location)
     )
     
-    (:action pickup
-        :parameters (?p - plate ?x - location)
+    (:action pick-up
+        :parameters (?r - robot ?p - plate ?loc - location)
         :precondition (and 
-            (at-robot ?x)
-            (at ?p ?x)
-            (empty-handed-robot)
+            (at ?r ?loc)
+            (at ?p ?loc)
+            (not (hasPlate ?r))
         )
         :effect (and
-            (holding ?p)
-            (not (empty-handed-robot))
+            (holding ?r ?p)
+            (hasPlate ?r)
         )
     )
     
     (:action present
-        :parameters (?p - plate ?c - customer ?x - location)
+        :parameters (?r - robot ?p - plate ?c - customer ?loc - location)
         :precondition (and
-            (at-robot ?x)
-            (at ?c ?x)
-            (holding ?p)
-            (has-food ?p)
+            (at ?r ?loc)
+            (at ?c ?loc)
+            (holding ?r ?p)
+            (hasFood ?p)
+            (not (served ?c))
         )
         :effect (and
-            (empty-handed-robot)
             (served ?c)
-            (not (holding ?p))
+            (not (holding ?r ?p))
+            (not (hasPlate ?r))
         )
     )
     
     (:action fill
-        :parameters (?p - plate ?x - location)
+        :parameters (?r - robot ?p - plate ?loc - location)
         :precondition (and
-            (at ?p ?x)
-			(is-bta ?x)
-            (not (has-food ?p))
+            (at ?r ?loc)
+			(buffet ?loc)
             (holding ?p)
+            (not (hasFood ?p))
         )
         :effect (and
-            (has-food ?p)
+            (hasFood ?p)
         )
     )
     
     (:action move
-        :parameters (?x - location ?y - location)
+        :parameters (?r - robot ?loc1 - location ?loc2 - location)
         :precondition (and
-            (at-robot ?x)
-            (adjacent ?x ?y)
+            (at ?r ?loc1)
+            (adjacent ?loc1 ?loc2)
         )
         :effect (and
-            (at-robot ?y)
-            (not (at-robot ?x))
+            (at ?r ?loc2)
+            (not (at-robot ?loc1))
             (forall (?p - plate) 
                 (when (holding ?p)
-                    (and (at ?p ?y) (not (at ?p ?x)))
+                    (and (at ?p ?loc2)
+                    (not (at ?p ?loc1)))
                 )
             )
         )

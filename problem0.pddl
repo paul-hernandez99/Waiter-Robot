@@ -14,15 +14,15 @@
 
     ;; Robot initialization
 
-    (at robot AUA)
+    (at robot BTA)
 
     ;; Plate initialization
 
-    (at plate1 PLA)
+    (at plate1 BTA)
 
     ;; Customer initialization
 
-    (at customer1 PLA)
+    (at customer1 PMA)
 
     ;; Define adjacent rooms
 
@@ -42,9 +42,7 @@
 
   (:goal
     (and 
-        (at robot PUA)
-        (served customer1)
-        (at plate1 PLA)
+      (served customer1) (at robot BTA) (at plate1 PMA)
     )
   )
 )
